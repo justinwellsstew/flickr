@@ -14,12 +14,13 @@
 			<input type="submit" value="submit">
 		</form>	
 		<section class="results">
-			{{photos.length}}
-			{{searchInput}}
-			<span ng-repeat="photo in photos">
+			<p ng-show="submitted">There are <strong>{{photos.length}}</strong> in "{{searchInput}}"</p>
+			<ul>
+			<li ng-repeat="photo in photos">
 			<img ng-src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg">
 			<p>{{photo.title}}</p>
-			</span>
+			</li>
+			</ul>
 		</section>
 	</div>
 	

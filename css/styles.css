@@ -2,3 +2,14 @@ input#search-box {
 	margin-top: 50%;
 	margin: auto;
 }
+
+.results img {
+	width: 10em;
+}
+
+li {
+	display: inline-block; 
+	float:left; 
+	width: 12em;
+	list-style-type: none;
+}

@@ -1,6 +1,13 @@
 angular.module('flickrApp', [])
 .controller('flickrCtrl', function($scope, $http){
+
+	
+
+    $scope.submitted = false;
+
 	$scope.submit = function(){
+		$scope.submitted = true;
+
 		var url = "https://api.flickr.com/services/rest";
 		var params = {
 		    method: 'flickr.photos.search',
@@ -9,7 +16,6 @@ angular.module('flickrApp', [])
 		    format: 'json',
 		    nojsoncallback: 1
 	    }
-
 	    $http({
 	    	url : url,
 	    	params : params,
