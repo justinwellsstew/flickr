@@ -1,15 +1,32 @@
-input#search-box {
-	margin-top: 50%;
-	margin: auto;
+html{
+	font-family: 'helvetica neue', helvetica, sans-serif;
 }
 
-.results img {
-	width: 10em;
+
+
+h1 {
+	text-align: center;
 }
+
+#container {
+	width: 80%;
+	margin: 20em auto 0 auto;
+}
+
+
+
+form {
+	text-align: center;
+}
+
 
 li {
 	display: inline-block; 
 	float:left; 
 	width: 12em;
 	list-style-type: none;
+}
+
+.results li img {
+	width: 10em;
 }
