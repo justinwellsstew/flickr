@@ -1,4 +1,4 @@
-angular.module('flickrApp', [])
+angular.module('flickrApp', ['ngAnimate'])
 .controller('flickrCtrl', function($scope, $http, $q, $timeout){
     $scope.search = false;
     $scope.message = "";
@@ -25,7 +25,7 @@ angular.module('flickrApp', [])
 
 		    }).then(wait)
 		    .then(function(results){
-		    	$scope.message = "There are " + $scope.photos.length + " tagged with " + input;
+		    	$scope.message = "There are " + $scope.photos.length + "images tagged with " + input;
 		    	
 		});
 			function wait() {

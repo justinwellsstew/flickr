@@ -29,8 +29,53 @@ li {
 
 .results li img {
 	width: 10em;
+	transition: all linear 1s;
 }
 
 .results p {
 	text-align: center;
+}
+
+#results {
+   padding: 1em;	
+ 
+
+}
+
+.search {
+	transition: all linear 3s;
+	font-size: 1em;
+}
+
+.search.ng-hide-remove {
+	font-size: 3em;
+	}
+
+ .search.ng-hide-remove-active {
+ }
+
+
+
+
+ .repeat-animation.ng-enter-stagger {
+  /* 200ms will be applied between each sucessive enter operation */ 
+  -webkit-transition-delay:2s;
+  transition-delay:2s;
+
+  /* this is here to avoid accidental CSS inheritance */
+  -webkit-transition-duration:0;
+  transition-duration:0;
+}
+
+.repeat-animation.ng-enter {
+  -webkit-transition:0.5s linear all;
+  transition:0.5s linear all;
+
+  opacity:0;
+  line-height:0;
+}
+
+.repeat-animation.ng-enter.ng-enter-active {
+  opacity:1;
+  line-height:20px;
 }
