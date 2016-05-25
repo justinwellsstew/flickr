@@ -16,7 +16,7 @@
 		</form>	
 		<section class="results">
 			<p ng-show="search">Searching for images of {{searchInput}}</p>
-			<p ng-show="submitted">There are <strong>{{photos.length}}</strong> in "{{searchInput}}"</p>
+			<p ng-show="submitted">There are <strong>{{photos.length}}</strong> images in "{{searchInput}}"</p>
 			<ul>
 			<li ng-repeat="photo in photos">
 			<img ng-src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg">

@@ -30,3 +30,7 @@ li {
 .results li img {
 	width: 10em;
 }
+
+.results p {
+	text-align: center;
+}

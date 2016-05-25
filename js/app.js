@@ -1,7 +1,6 @@
 angular.module('flickrApp', [])
 .controller('flickrCtrl', function($scope, $http, $q, $timeout){
 
-
     $scope.submitted = false;
     $scope.search = false;
 
@@ -21,6 +20,7 @@ angular.module('flickrApp', [])
 		     }).success(function(results){
 		    	$scope.search = true;
 		    	$scope.photos = results.photos.photo;
+		    	
 		    }).then(wait)
 		    .then(function(results){
 		    	$scope.search = false;
