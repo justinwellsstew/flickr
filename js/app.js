@@ -1,10 +1,10 @@
 angular.module('flickrApp', [])
 .controller('flickrCtrl', function($scope, $http, $q, $timeout){
-
-    $scope.submitted = false;
     $scope.search = false;
+    $scope.message = "";
 
 	$scope.submit = function(){
+			var input = $scope.searchInput;
 	    	var url = "https://api.flickr.com/services/rest";
 			var params = {
 			    method: 'flickr.photos.search',
@@ -18,13 +18,15 @@ angular.module('flickrApp', [])
 		    	params : params,
 
 		     }).success(function(results){
+		     	$scope.searchInput = "";
 		    	$scope.search = true;
 		    	$scope.photos = results.photos.photo;
-		    	
+		    	$scope.message = "searching for images tagged with " + input;
+
 		    }).then(wait)
 		    .then(function(results){
-		    	$scope.search = false;
-		    	$scope.submitted = true;
+		    	$scope.message = "There are " + $scope.photos.length + " tagged with " + input;
+		    	
 		});
 			function wait() {
 		    return $q(function(resolve, reject){
